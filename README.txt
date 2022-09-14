@@ -1,0 +1,11 @@
+# capstone-project
+
+Included in this repository is the source code for my capstone project, a Unity3D game. The purpose of the game is to give instructions to an AI in order for it to develop infrastructure to collect resources. Written in C# using Visual Studio Code, this project was divided into two main goals. 
+
+The first was to create an algorithm to search a grid of tiles for a specific type of tile (such as a forest tile). Included are three different options to specify how to search for the specified type of tile: closest, furthest, and best searches. Closest search starts at the center of the grid and begins by searching the tiles that are surrounding the center tile. If no tiles are found within one tile of the center, then the search moves to tiles two tiles away from the center. This process continues until the first instance of the specified tile is found. Furthest search follows the same concept as closest search, searching all tiles of a certain distance away from the center, but begins along the outermost perimeter, working its way inward until a result is found. The best search refers to finding a tile of the specified type that will yield the greatest number of a resource (such as wood for a forest). Thus, it is a linear search where the result is the tile of the specific type that has the highest resource yield/yield potential.
+
+The second goal was to setup a way to give the AI instructions. This is done by encoding instructions as a struct which can be executed by the scene controller, responsible for a top-level control of the game (such as initializing the grid the game is played on and passing instructions to toggle certain parts of the UI). From the player's perspective, they must drag three different data containers, called modules, into the command area of the training menu. Then, they must select the modules and configure the instruction through a properties menu to the side of the command area.
+
+Inside the Assets folder are the scripts used for the game's various capabilities and logic.
+
+Inside the Demo folder is a video demonstration of the game.
